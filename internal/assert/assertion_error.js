@@ -337,6 +337,7 @@ class AssertionError extends Error {
 
     if (message != null) {
       super(String(message));
+      this.message = message;
     } else {
       if (process.stderr && process.stderr.isTTY) {
         // Reset on each call to make sure we handle dynamically set environment
